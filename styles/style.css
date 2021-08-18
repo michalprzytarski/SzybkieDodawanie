@@ -1,0 +1,175 @@
+/* Zdefniowanie koloró używanch na stronie */
+:root {
+  --primary-color: #f2ff5e;
+  --seconadry-color: #fffafa;
+  --background-color: #a0daf3;
+  --distinction-color: #f6b2b8;
+  --dark-color: #383e40;
+}
+/* Obsługa różnych stanów, w jakich mogą znaleźć się hiperłącza */
+a:link {
+  color: var(--seconadry-color);
+  text-decoration: none;
+}
+a:visited {
+  color: var(--seconadry-color);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+a:active {
+  color: var(--distinction-color);
+  text-decoration: none;
+}
+
+/* Ogólne stylizowanie całości strony (ustawienie koloru i tekstury tła, fontu*/
+body {
+  background-color: var(--background-color);
+  /*background-image: url("..\\images\\edited-vintage-concrete.png"); /* Background pattern from Toptal Subtle Patterns */
+  color: var(--primary-color);
+  font-family: "Open Sans", sans-serif;
+  margin: 0px;
+}
+
+/* stylizowanie górnego palelu zawierającego nagłówek strony*/
+.top-panel {
+  width: 100%;
+  height: auto;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  padding: 0px;
+  border-bottom: var(--seconadry-color) 2pt solid;
+}
+
+/* Stylizowanie tekstu nagłówka */
+.top-panel h1 {
+  color: var(--primary-color);
+  font-size: 72px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0px;
+  padding: 10pt;
+
+  text-shadow: -1px -1px 1px var(--dark-color), 3px 3px 1px var(--dark-color);
+}
+
+/* Zadelarowanie odpowiedniego układu elementów w głównej sekcji*/
+section {
+  display: flex;
+  justify-content: center;
+}
+
+/* Stlizowanie palenu z zadaniem */
+#excercise-panel {
+  flex-grow: 3;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* Stylizowanie tekstu nagłówka panelu z zdaniem*/
+#excercise-panel h2 {
+  font-size: 48px;
+  text-align: center;
+  color: var(--distinction-color);
+  text-shadow: -1px -1px 1px var(--seconadry-color),
+    2px 2px 1px var(--dark-color);
+  margin: 0px;
+  margin-bottom: 10pt;
+}
+
+/* Stylizowanie klasy kontenera na teskst zadania*/
+.excercise-text {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: min-content;
+  padding: 0pt;
+  margin: 0px;
+  color: var(--dark-color);
+  background-color: var(--seconadry-color);
+  border: var(--dark-color) solid 2pt;
+  text-shadow: var(--distinction-color) 1px 1px;
+}
+
+/* Stylizowanie klasy tekstu zadania */
+.excercise-text p {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 48px;
+  margin: 0px;
+  padding: 10pt;
+}
+
+/* Stylizowanie palelu na przyciski z odpoweidzami */
+#button-panel {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Stylizowanie klasy przycisku */
+.button {
+  color: var(--dark-color);
+  flex-grow: 1;
+  border-radius: 15px;
+  background-color: var(--seconadry-color);
+  text-shadow: var(--primary-color) 1px 1px 2px;
+  margin: 10pt;
+  padding: 10pt;
+  text-align: center;
+  border: var(--dark-color) 2pt solid;
+  cursor: pointer;
+}
+
+/* Przycisk po najechaniu na niego kursorem myszy */
+.button:hover {
+  background-color: var(--distinction-color);
+  color: var(--seconadry-color);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  text-shadow: var(--dark-color) 1px 1px 2px;
+}
+
+/* Stylizowanie panelu zawierającego informacje o aplikacji */
+#info-panel {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  border-left: dotted 2px var(--seconadry-color);
+  padding: 20pt;
+  flex-grow: 1;
+  color: var(--seconadry-color);
+}
+
+/* Stylizowanie klasy reprezentującej linie tekstu w palelu informacyjnym */
+.info-panel-label {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: dashed var(--seconadry-color) 1px;
+}
+
+/* Stylizowanie panelu dolnego zawierającego stopkę */
+.bottom-panel {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: var(--dark-color);
+}

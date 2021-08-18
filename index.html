@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<!-- Dane o stronie -->
+<head>
+    <meta charset="utf-8"/>
+    <title>Tester szybkości dodawania</title>
+    <meta name="description" content="Sprawdź jak szybko potrafisz dodawać!"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <link rel="stylesheet" href="styles/style.css" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+
+</head>
+
+<!-- Wygląd strony -->
+<body>
+    <!-- Nagłówek strony -->
+    <header>
+        <div class="top-panel">
+            <h1>Sprawdź jak szybko potrafisz dodawać</h1>
+        </div>
+    </header>
+
+    <!-- Sekcja zaweirająca gówne elementy strony: kontener na pytania i panel informacyjny -->
+    <section>
+
+        <!-- Kontener na pytania -->
+        <div id="excercise-panel">
+            <h2>Wybierz poprawny wynik</h2>
+
+            <!-- Kontener na wartości liczbowe składników sumy -->
+            <div class="excercise-text">
+                <p id="a-label">A</p>
+                <p> + </p>
+                <p id="b-label">B</p>
+            </div>
+
+            <!-- Kontener na przyciski obsługujące odpowiedzi -->
+            <div id="button-panel">
+                <div style="clear:both"></div>
+                <div class="button", id="button1">Odpowiedź 1</div>
+                <div class="button", id="button2">Odpowiedź 2</div>
+                <div class="button", id="button3">Odpowiedź 3</div>
+                <div class="button", id="button4">Odpowiedź 4</div>
+            </div>
+        </div>
+
+        <!-- Panel zawierający informacje o bierzącej sesji -->
+        <div id="info-panel">
+            <!-- Div zawiera linie tekstu z timerem -->
+            <div class="info-panel-label">
+                <p>Pozostało </p>
+                <p id="timer">∞</p>
+                <p>sekund</p>
+            </div>
+            <!-- Div zawiera linie tekstu z aktualnym poziomem -->
+            <div class="info-panel-label">
+                <p>Aktualny poziom: </p>
+                <p id="current-level-label">x</p>
+            </div>
+            <!-- Div zaweira linie tekstu z najwyższym poziomem, do którego dotarto w bierzącej sesji-->
+            <div class="info-panel-label">
+                <p>Najwyższy poziom w bierzącej sesji: </p>
+                <p id="highest-level-label">x</p>
+            </div>
+            <!-- hiperłącze do strony z zasadami gry -->
+            <a href="rules.html", id="rules-href"><p>Zasady gry</p></a>
+            <!-- hiperłącze do strony z informacjami o aplikcaji -->
+            <a href="about.html", id="about-href"><p>O aplikacji</p></a>
+        </div>
+    </section>
+
+    <!-- Stopka storny -->
+    <footer>
+        <div class="bottom-panel">
+            <p>Autor: Michał Przytarski</p>
+        </div>
+    </footer>
+
+    <!-- Podłączenie skryptu do strony -->
+    <script src="scripts/script.js"></script>
+    <!-- Uruchomienie kodu odpowiedzialnego za stworzenie pierwszego zadania, bez uruchamiania timera -->
+    <script>Trial()</script>
+</body>
+
+</html>

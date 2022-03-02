@@ -56,7 +56,7 @@ body {
 }
 
 /* Zadelarowanie odpowiedniego układu elementów w głównej sekcji*/
-section {
+main {
   display: flex;
   justify-content: center;
 }
